@@ -1,0 +1,14 @@
+.bt-body {
+    background-color: rgb(122, 89, 95);
+    color: white;
+}
+ul {
+    color: white;
+}
+.login-button{
+    top: 25px;
+    left: 25px;
+    width: 200px;
+    height: 75px;
+    position: absolute;
+}

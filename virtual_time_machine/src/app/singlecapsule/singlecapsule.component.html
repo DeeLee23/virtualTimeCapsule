@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card">
+          <div class="card-body">
+            <div class="row descriptor-section">
+              <div class="col-md-4">
+                <strong>Name:</strong>
+                <input type="text" [(ngModel)]="capsule.name" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <strong>Created Date:</strong>
+                <input type="date" [(ngModel)]="capsule.createdDate" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <strong>Open Date:</strong>
+                <input type="date" [(ngModel)]="capsule.openDate" class="form-control">
+              </div>
+              <div class="col-md-12">
+                <strong>Description:</strong>
+                <textarea [(ngModel)]="capsule.description" class="form-control"></textarea>
+              </div>
+            </div>
+  
+            <hr>
+            <h3>Files:</h3>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div *ngFor="let file of files; let i = index" class="col-md-3 mb-3">
+                    <div class="card">
+                      <img [src]="file.thumbnailUrl" class="card-img-top" alt="{{ file.filename }}">
+                      <div class="card-body text-center">
+                        <p class="card-text">{{ file.filename }}</p>
+                        <button type="button" class="btn btn-danger btn-sm" (click)="deleteFile(i)">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-12">
+                <input type="file" (change)="onFileSelected($event)" multiple>
+                <button (click)="uploadFiles()" class="btn btn-success mt-2">Add Files</button>
+              </div>
+            </div>
+  
+            <div class="row mt-3">
+              <div class="col-md-12 text-right">
+                <button (click)="updateCapsule()" class="btn btn-primary mr-2">Update</button>
+                <button (click)="deleteCapsule()" class="btn btn-danger">Delete</button>
+              </div>
+            </div>
+  
+            <div *ngIf="updated" class="popup">
+              <div class="popup-content">
+                <button (click)="goHome()">Go Home</button>
+                <button (click)="capsuleLocked()">Mark as Completed</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

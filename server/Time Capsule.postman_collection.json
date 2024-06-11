@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "e4f6bc18-caed-46a1-8377-d5fdceb32b66",
+		"name": "Time Capsule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34517164"
+	},
+	"item": [
+		{
+			"name": "Get Single Capsule",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Every Capsule",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new Capsule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"18th Birthday\",\n    \"description\": \"18th Birthday on 3/9/2018\",\n    \"capsuleID\": \"test\",\n    \"createdDate\": \"3/10/2018\",\n    \"openDate\": \"3/10/2019\",\n    \"completed\": false,\n    \"owner\": \"titusgoh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/capsuleList"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Card Styles */
+.card {
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* Descriptor Section Styles */
+.descriptor-section {
+    margin-bottom: 20px;
+}
+
+.descriptor-section .col-md-4,
+.descriptor-section .col-md-12 {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.descriptor-section strong {
+    color: #343a40;
+}
+
+/* List Group Styles */
+.list-group-item {
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+/* Section Title */
+h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Rule */
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Button Spacing */
+.btn + .btn {
+    margin-left: 10px;
+}
